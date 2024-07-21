@@ -1,4 +1,4 @@
-## COMP90018: Mobile Computing Programming
+## COMP90018: Mobile Computing Systems Programming
 
 ### Preparation
 
