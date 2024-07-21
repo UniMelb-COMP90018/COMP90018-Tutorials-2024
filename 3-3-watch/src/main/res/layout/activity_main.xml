@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:boxedEdges="all">
+
+        <TextView
+            android:id="@+id/status_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/hello_world" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+            <Button
+                android:layout_marginTop="33dp"
+                android:id="@+id/button1"
+                android:layout_toLeftOf="@+id/button2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/emoji_agree" />
+
+            <Button
+                android:layout_marginTop="33dp"
+                android:id="@+id/button2"
+                android:layout_toRightOf="@+id/button1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/emoji_disagree" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.wear.widget.BoxInsetLayout>

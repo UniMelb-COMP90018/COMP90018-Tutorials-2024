@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Android Thread Tests</string>
+
+    <!-- Button strings -->
+    <string name="update_ui">Update UI (Main Thread)...</string>
+    <string name="button_press">Button Pressed: </string>
+    <string name="crash_button">A: Directly from Thread</string>
+    <string name="change_text_runnable">B: via Runnable Interface</string>
+    <string name="change_text_threads">C: via Thread Class</string>
+    <string name="change_text_future_task">D: via FutureTask Class</string>
+    <string name="change_text_asynctask">E: via AsyncTask Class</string>
+    <string name="change_text_handler_thread">F: via HandlerThread Class</string>
+    <string name="change_text_intent_service">G: via Intent Service</string>
+    <string name="change_text_event_bus">H: via Threads through EventBus</string>
+
+
+</resources>

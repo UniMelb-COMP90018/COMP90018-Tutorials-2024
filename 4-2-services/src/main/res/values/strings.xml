@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">week4-services</string>
+
+    <string name="channel_name">Notification Channel 1</string>
+    <string name="channel_description">This is a notification test channel</string>
+
+</resources>

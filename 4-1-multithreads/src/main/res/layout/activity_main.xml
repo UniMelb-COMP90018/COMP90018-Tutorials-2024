@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/update_ui"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/crash_button"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/crash_button" />
+
+    <ImageView
+        android:id="@+id/prefBar"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/crash_button"
+        android:background="@color/black">
+    </ImageView>
+
+    <Button
+        android:id="@+id/change_text_runnable"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prefBar"
+        android:text="@string/change_text_runnable" />
+
+    <Button
+        android:id="@+id/change_text_threads"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_text_runnable"
+        android:text="@string/change_text_threads" />
+
+
+    <Button
+        android:id="@+id/change_text_future_task"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_text_threads"
+        android:text="@string/change_text_future_task" />
+
+
+    <Button
+        android:id="@+id/change_text_asynctask"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_text_future_task"
+        android:text="@string/change_text_asynctask" />
+
+    <Button
+        android:id="@+id/change_text_handler_thread"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_text_asynctask"
+        android:text="@string/change_text_handler_thread" />
+
+    <Button
+        android:id="@+id/change_text_intent_service"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_text_handler_thread"
+        android:text="@string/change_text_intent_service" />
+
+    <Button
+        android:id="@+id/change_text_event_bus"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_text_intent_service"
+        android:text="@string/change_text_event_bus" />
+
+    <TextView
+        android:id="@+id/button_press"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/change_text_event_bus"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/button_press"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:text="Hello world!"
+        android:textSize="20sp" />
+
+</RelativeLayout>

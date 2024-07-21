@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Wear OS</string>
+    <string name="emoji_agree">&#128077;</string>
+    <string name="emoji_disagree">&#128078;</string>
+
+    <string name="agree_label">Great Success!</string>
+    <string name="disagree_label">Ah, this is unfortunate!</string>
+    <string name="question_label">Does this make sense?</string>
+
+    <!--
+      This string is used for square devices and overridden by hello_world in
+      values-round/strings.xml for round devices.
+      -->
+    <string name="hello_world">Hello Square World!</string>
+
+</resources>

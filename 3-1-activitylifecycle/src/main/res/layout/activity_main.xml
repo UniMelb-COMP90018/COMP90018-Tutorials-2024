@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
+        android:id="@+id/start_normal_activity"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Start NormalActivity" />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/start_dialog_activity"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Start DialogActivity" />
+
+</LinearLayout>
