@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         Explicit intents specify which component of which application
         will satisfy the intent, by specifying a full ComponentName.
          */
-        if (intent == IntentStyle.Implicit) {
+        if (intent == IntentStyle.Explicit) {
             //Explicit Intents
             Log.d(TAG, "outputLog: Step one: Explicit Intent");
             Intent intent = new Intent(this, Main2Activity.class);
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         but instead declare a general action to perform,
         which allows a component from another app to handle it.
          */
-        if (intent == IntentStyle.Explicit) {
+        if (intent == IntentStyle.Implicit) {
             //Implicit Intents
             Intent intent = new Intent();
             intent.setAction("SecondActivity");
