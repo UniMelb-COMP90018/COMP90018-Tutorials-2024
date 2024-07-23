@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/panel"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/point"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Switch"
+            android:layout_alignTop="@+id/panel" />
+
+        <LinearLayout
+            android:id="@+id/text_layout"
+            android:layout_below="@+id/panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sensor_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="@string/sensor_label"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/barometer_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>

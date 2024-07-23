@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sensor Demo: GPS</string>
+    <string name="latitude_label">Latitude:</string>
+    <string name="longitude_label">Longitude:</string>
+    <string name="button_label">Get current GPS location:</string>
+
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sensor Demo: Barometer</string>
+    <string name="sensor_label">Loading sensor...</string>
+    <string name="pressure_label">Pressure:</string>
+    <string name="pressure_sensor_invalid">Pressure sensor is not available</string>
+    <string name="sensor_invalid">Sensors are not available</string>
+</resources>
