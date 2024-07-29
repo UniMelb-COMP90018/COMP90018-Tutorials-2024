@@ -1,6 +1,5 @@
 package com.example.layoutdemo;
 
-
 // Fruit class contains fruitImage and fruitName
 // With automatically generated Setter and Getter
 public class Fruit {
