@@ -46,4 +46,5 @@ dependencies {
 
     // Use to implement support for interactions from the Wearables to Phones
     implementation("androidx.wear:wear-phone-interactions:1.0.1")
+    implementation(libs.constraintlayout)
 }

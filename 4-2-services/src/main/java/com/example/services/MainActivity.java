@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        /// region NotificationManager
         // for notifications permission now required in api 33
         rpl = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(),
                 new ActivityResultCallback<Map<String, Boolean>>() {
@@ -132,7 +133,9 @@ public class MainActivity extends AppCompatActivity {
                 rpl.launch(REQUIRED_PERMISSIONS);
             }
         }
+        /// endregion
 
+        /// region onClickListeners
         binding.startService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -170,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        /// endregion
 
         // Register for EventBus Library
         EventBus.getDefault().register(this);

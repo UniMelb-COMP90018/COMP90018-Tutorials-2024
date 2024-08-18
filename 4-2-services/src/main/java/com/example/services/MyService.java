@@ -25,7 +25,6 @@ public class MyService extends Service {
     private DownloadBinder mBinder = new DownloadBinder();
 
     class DownloadBinder extends Binder {
-
         public void startDownload() {
             Log.d("MyService", "startDownload executed");
         }
@@ -34,7 +33,6 @@ public class MyService extends Service {
             Log.d("MyService", "getProgress executed");
             return 0;
         }
-
     }
 
     // Called when Activity perform bindService() method
@@ -54,6 +52,7 @@ public class MyService extends Service {
         EventBus.getDefault().register(this);
         EventBus.getDefault().post(new MessageEvent(MessageEvent.SERVICE, "Hello from Service using EventBus"));
 
+        ///region NotificationManager
         // Lets notify the user from within the service
         notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         Intent intent = new Intent(this, MainActivity.class);
@@ -72,6 +71,7 @@ public class MyService extends Service {
                 .build();
 
         notificationManager.notify(1, notification);
+        ///endregion
     }
 
     @Override

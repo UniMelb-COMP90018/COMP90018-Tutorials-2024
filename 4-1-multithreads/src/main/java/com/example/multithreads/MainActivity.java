@@ -1,5 +1,8 @@
 package com.example.multithreads;
 
+import static java.lang.String.*;
+
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -47,30 +50,32 @@ public class MainActivity extends AppCompatActivity {
     private HandlerThread exampleHandlerThread;
     private BroadcastReceiver broadcastReceiver;
 
+
     private long actionedTime, elapsedTime;
 
     private LocalBroadcastManager localBroadcastManager;
 
     Handler handler = new Handler(Looper.getMainLooper(), new Handler.Callback() {
+        @SuppressLint("DefaultLocale")
         @Override
         public boolean handleMessage(@NonNull Message msg) {
             switch (msg.what) {
                 case UPDATE_TEXT_RUNNABLE: {
                     elapsedTime = (System.currentTimeMillis() - actionedTime) / 1000;
-                    text.setText("Message Received from Runnable Interface after " + elapsedTime + " seconds");
+                    text.setText(format("Message Received from Runnable Interface after %d seconds", elapsedTime));
                     break;
                 }
                 case UPDATE_TEXT_THREAD: {
                     elapsedTime = (System.currentTimeMillis() - actionedTime) / 1000;
-                    text.setText("Message Received from Thread Class after " + elapsedTime + " seconds");
+                    text.setText(format("Message Received from Thread Class after %d seconds", elapsedTime));
                     break;
                 }
                 case UPDATE_TEXT_FUTURETASK: {
-                    text.setText((String) msg.obj + " Message received after " + elapsedTime + " seconds");
+                    text.setText(format("%s Message received after %d seconds", msg.obj, elapsedTime));
                     break;
                 }
                 case UPDATE_TEXT_HANDLER_RECEIVE: {
-                    text.setText("Message Received from HandlerThread Class after " + elapsedTime + " seconds");
+                    text.setText(format("Message Received from HandlerThread Class after %d seconds", elapsedTime));
                     exampleHandlerThread.quit();
                     break;
                 }
@@ -88,12 +93,6 @@ public class MainActivity extends AppCompatActivity {
         text.setText("");
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // register for receiving EventBus
-        EventBus.getDefault().register(this);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -199,6 +198,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * Async Task was deprecated in API 30 : https://developer.android.com/reference/android/os/AsyncTask
+         *
+         * This implementation uses no reference point, this stops the task from being Garbage Collected if the activity is destroyed, resulting in a memory leak.
+         * This example is provided for historical purposes, but you should use one of the other threading examples that are still supported.
+         */
         binding.changeTextAsynctask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -244,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
 
                 new Handler(exampleHandlerThread.getLooper(), new Handler.Callback() {
                     @Override
-                    public boolean handleMessage(Message message) {
+                    public boolean handleMessage(@NonNull Message message) {
                         switch (message.what) {
                             case UPDATE_TEXT_HANDLER_SEND: {
                                 try {
@@ -276,7 +281,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onReceive(Context context, Intent intent) {
                         String message = intent.getStringExtra(ExampleIntentService.RESULT_PARAM);
                         elapsedTime = (intent.getLongExtra(ExampleIntentService.RESULT_DURATION, System.currentTimeMillis()) - actionedTime) / 1000;
-                        text.setText(message + " Received in " + elapsedTime + " seconds.");
+                        text.setText(format("%s Received in %d seconds.", message, elapsedTime));
                         localBroadcastManager.unregisterReceiver(broadcastReceiver);
                     }
                 };
@@ -312,12 +317,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        // register for receiving EventBus
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
     public void onStop() {
         // Unregister EventBus to avoid Android OOM (out-of-memory)
         EventBus.getDefault().unregister(this);
         super.onStop();
     }
-
+    
     // The method to process when receiving MessageEvent
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(MessageEvent event) {
