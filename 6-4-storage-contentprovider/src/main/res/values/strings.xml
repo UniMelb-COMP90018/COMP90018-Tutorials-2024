@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Storage: Content Provider</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_data">Add to Book</string>
+    <string name="delete_data">Delete from Book</string>
+    <string name="update_data">Update Book</string>
+    <string name="query_data">Query from Book</string>
+</resources>

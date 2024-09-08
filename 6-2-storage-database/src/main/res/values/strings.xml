@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Storage: SQLite</string>
+    <string name="action_settings">Settings</string>
+    <string name="create_database">Create Database</string>
+    <string name="add_data">Add Data</string>
+    <string name="delete_data">Delete Data</string>
+    <string name="update_data">Update Data</string>
+    <string name="query_data">Query Data</string>
+    <string name="less_than">&lt;</string>
+    <string name="greater_than">&gt;</string>
+</resources>

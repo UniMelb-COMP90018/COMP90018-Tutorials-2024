@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Storage: Internal Storage</string>
+    <string name="save">Save</string>
+    <string name="load">Load</string>
+    <string name="clear">Clear text</string>
+    <string name="hint">Type something here...</string>
+</resources>
