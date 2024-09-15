@@ -13,6 +13,8 @@ firebaseCrashlyticsBuildtools = "3.0.2"
 playServicesLocation = "21.3.0"
 navigationFragment = "2.8.0"
 navigationUi = "2.8.0"
+roomCompilerProcessingTesting = "2.6.1"
+firebaseDatabase = "21.0.0"
 
 [libraries]
 greendao = { module = "org.greenrobot:greendao", version.ref = "greendao" }
@@ -28,6 +30,8 @@ firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "fireb
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
+room-compiler-processing-testing = { group = "androidx.room", name = "room-compiler-processing-testing", version.ref = "roomCompilerProcessingTesting" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
